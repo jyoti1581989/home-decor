@@ -15,6 +15,7 @@ const decorItemSchema = new Schema({
     category: {
         type: Schema.Types.ObjectId,
         ref: 'Category',
+        required: true
     },
     price: {
         type: Number,
@@ -23,4 +24,4 @@ const decorItemSchema = new Schema({
     timestramps: true
 })
 
-modelName.exports = itemSchema
+module.exports = mongoose.model('DecorItem', decorItemSchema)
