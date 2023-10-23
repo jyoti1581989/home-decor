@@ -1,0 +1,16 @@
+ .contentStyle {
+     color: '#fff';
+     height: 500px;
+     width: 100%;
+     padding: 10px 400px 0 400px;
+     border-radius: 2%;
+
+ }
+
+ .about {
+     display: flex;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+     padding: 100px;
+ }

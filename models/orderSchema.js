@@ -1,10 +1,14 @@
 const Schema = require('mongoose').Schema
 
-const orderItemSchema = new Schema({
+const orderItemsSchema = new Schema({
     decorItem: {
         type: Schema.Types.ObjectId,
         ref: "DecorItem",
         required: true
+    },
+    qty: {
+        type: Number,
+        default: 1
     }
 }, {
     timestamps: true
@@ -16,7 +20,7 @@ const orderSchema = new Schema({
         ref: "User",
         required: true
     },
-    orderItem: [orderItemSchema],
+    orderItems: [orderItemsSchema],
 
     total: {
         type: Number
