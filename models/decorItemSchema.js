@@ -5,7 +5,7 @@ const decorItemSchema = new Schema({
         type: String,
         required: true
     },
-    discription: {
+    description: {
         type: String,
         required: true
     },
@@ -24,4 +24,4 @@ const decorItemSchema = new Schema({
     timestramps: true
 })
 
-module.exports = mongoose.model('DecorItem', decorItemSchema)
+module.exports = decorItemSchema
