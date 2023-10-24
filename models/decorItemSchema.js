@@ -20,8 +20,9 @@ const decorItemSchema = new Schema({
     price: {
         type: Number,
         required: true
-    },
-    timestramps: true
+    }
+}, {
+    timestamps: true
 })
 
 module.exports = decorItemSchema

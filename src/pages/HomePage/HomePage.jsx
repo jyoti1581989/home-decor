@@ -3,7 +3,7 @@ import "./HomePage.css"
 
 export default function HomePage() {
     return (<div>
-        <Carousel autoplay autoplaySpeed={4500}>
+        <Carousel autoplay autoplaySpeed={2500}>
             <div>
                 <img src="/images/home-spring.png" alt="" className="contentStyle" />
             </div>

@@ -12,7 +12,6 @@ const orderItemSchema = new Schema({
 })
 
 orderItemSchema.virtual('orderItemPrice').get(function () {
-    // 'this' keyword is bound to the lineItem document
     return this.qty * this.decorItem.price
 })
 
@@ -30,7 +29,7 @@ const orderSchema = new Schema({
 })
 
 orderSchema.virtual('orderTotal').get(function () {
-    return this.orderItems.reduce((total, item) => total + item.extPrice, 0)
+    return this.orderItems.reduce((total, item) => total + item.orderItemPrice, 0)
 })
 
 orderSchema.virtual('orderQty').get(function () {
@@ -61,9 +60,8 @@ orderSchema.methods.addItemToCart = async function (itemId) {
     } else {
         // Get the item from the "catalog"
         // Note how the mongoose.model method behaves as a getter when passed one arg vs. two
-        const Item = mongoose.model('Item')
-        const item = await Item.findById(itemId)
-        // The qty of the new lineItem object being pushed in defaults to 1
+        const orderItem = mongoose.model('orderItem')
+        const item = await orderItem.findById(itemId)
         cart.orderItems.push({ item })
     }
     // return the save() method's promise
