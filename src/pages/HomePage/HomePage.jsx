@@ -5,16 +5,16 @@ export default function HomePage() {
     return (<div>
         <Carousel autoplay>
             <div>
-                <img src="/images/home-spring.png" alt="" className="contentStyle" />
+                <img src="/Images/home-spring.png" alt="" className="contentStyle" />
             </div>
             <div>
-                <img src="/images/home-summer.png" alt="" className="contentStyle" />
+                <img src="/Images/home-summer.png" alt="" className="contentStyle" />
             </div>
             <div>
-                <img src="/images/home-fall.png" alt="" className="contentStyle" />
+                <img src="/Images/home-fall.png" alt="" className="contentStyle" />
             </div>
             <div>
-                <img src="/images/home-christmas.png" alt="" className="contentStyle" />
+                <img src="/Images/home-christmas.png" alt="" className="contentStyle" />
             </div>
         </Carousel>
         <div className="about">
