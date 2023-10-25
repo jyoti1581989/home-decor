@@ -7,6 +7,7 @@ import NewOrderPage from '../NewOrderPage/NewOrderPage'
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage'
 import NavBar from '../../components/NavBar/index'
 import HomePage from '../HomePage/HomePage'
+import SeasonItemPage from '../SeasonItemPage/SeasonItemPage'
 import { ConfigProvider } from 'antd'
 
 export default function App() {
@@ -25,10 +26,11 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           {!user && <Route path="/auth" element={<AuthPage setUser={setUser} />} />}
+          <Route path="/category/:season" element={<SeasonItemPage />} />
           {/* additional Routes... */}
           {/* <Route path="/*" element={<Navigate to="/" />} /> */}
         </Routes>
-      </main>
-    </ConfigProvider>
+      </main >
+    </ConfigProvider >
   )
 }

@@ -1,6 +1,7 @@
 import { Layout, Menu, Avatar, Col, Button } from 'antd'
 import { Link } from 'react-router-dom'
 import {
+    HomeOutlined,
     UserOutlined,
     UserAddOutlined,
     LogoutOutlined
@@ -20,6 +21,17 @@ const NavBar = ({ user, setUser }) => {
                 <Col md={2}>
                     <div className="logo" style={{ color: 'white' }}>Home Decor</div>
                 </Col>
+                <Col md={20}>
+                    <Menu mode="horizontal" style={{ color: 'white', backgroundColor: 'rgb(75, 17, 17)' }}>
+                        <Menu.Item key="1" icon={<HomeOutlined />}><Link to="/">Home</Link></Menu.Item>
+
+                        {user && <><Menu.Item key="2"><Link to="/category/spring">Spring</Link></Menu.Item>
+                            <Menu.Item key="3"><Link to="/category/summer">Summer</Link></Menu.Item>
+                            <Menu.Item key="4"><Link to="/category/fall">Fall</Link></Menu.Item>
+                            <Menu.Item key="5"><Link to="/category/winter">Winter</Link></Menu.Item></>}
+
+                    </Menu>
+                </Col>
                 <Menu theme="dark" mode="horizontal" style={{ color: 'white', backgroundCplor: 'rbg(75, 17, 17)' }}>
                     <Menu.SubMenu key="sub-menu"
                         title={
@@ -34,13 +46,13 @@ const NavBar = ({ user, setUser }) => {
                             <UserAddOutlined /><Link to="/auth">SignUp/SignIn</Link>
                         </Menu.Item>
                         <Menu.Item key="log-out" style={{ color: 'white', backgroundColor: 'rgb(75, 17, 17)' }}>
-                            <LogoutOutlined /><Button onClick={handleLogOut}>LogOut</Button>
+                            <LogoutOutlined /><Link to="/auth" onClick={handleLogOut}>LogOut</Link>
                         </Menu.Item>
 
                     </Menu.SubMenu>
                 </Menu>
-            </Header>
-        </Layout>
+            </Header >
+        </Layout >
     )
 }
 
