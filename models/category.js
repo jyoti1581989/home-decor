@@ -5,7 +5,7 @@ const categorySchema = new Schema({
     name: { type: String, required: true },
     sortOrder: Number
 }, {
-    timestramps: true
+    timestamps: true
 
 })
 
