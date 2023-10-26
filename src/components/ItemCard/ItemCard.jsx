@@ -2,7 +2,7 @@ import { PlusCircleOutlined } from '@ant-design/icons'
 import { Card, Button } from 'antd'
 const { Meta } = Card
 
-export default function ItemCard({ item }) {
+export default function ItemCard({ item, handleAddToOrder, handleChangeQty }) {
     return (
         <Card
             style={{ width: 300 }}
@@ -13,7 +13,7 @@ export default function ItemCard({ item }) {
                 />
             }
             actions={[
-                <Button type="primary" icon={<PlusCircleOutlined />} >Add To Cart</Button>
+                <Button type="primary" icon={<PlusCircleOutlined />} onClick={() => handleAddToOrder(item._id)}>Add To Cart</Button>
             ]}
         >
             <Meta

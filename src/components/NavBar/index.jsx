@@ -8,9 +8,12 @@ import {
 
 } from '@ant-design/icons'
 import { logOut } from '../../utilities/users-service'
+import Cart from '../Cart/Cart'
+
 const { Header } = Layout
 
-const NavBar = ({ user, setUser }) => {
+
+const NavBar = ({ user, setUser, cart }) => {
     function handleLogOut() {
         logOut()
         setUser(null)
@@ -33,6 +36,9 @@ const NavBar = ({ user, setUser }) => {
                     </Menu>
                 </Col>
                 <Menu theme="dark" mode="horizontal" style={{ color: 'white', backgroundCplor: 'rbg(75, 17, 17)' }}>
+                    <Menu.Item key="cart" style={{ color: 'white', backgroundColor: 'rgb(75, 17, 17)' }}>
+                        <Cart cart={cart}></Cart>
+                    </Menu.Item>
                     <Menu.SubMenu key="sub-menu"
                         title={
                             <>

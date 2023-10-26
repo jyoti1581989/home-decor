@@ -1,5 +1,7 @@
 const decorItemSchema = require('./decorItemSchema')
-const Schema = require('mongoose').Schema
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
 const orderItemSchema = new Schema({
     decorItem: decorItemSchema,
     qty: {
@@ -53,16 +55,16 @@ orderSchema.methods.addItemToCart = async function (itemId) {
     // 'this' keyword is bound to the cart (order doc)
     const cart = this
     // Check if the item already exists in the cart
-    const orderItem = cart.orderItems.find(orderItem => orderItem.item._id.equals(itemId))
+    const orderItem = cart.orderItems.find(orderItem => orderItem.decorItem._id.equals(itemId))
     if (orderItem) {
         // It already exists, so increase the qty
         orderItem.qty += 1
     } else {
         // Get the item from the "catalog"
         // Note how the mongoose.model method behaves as a getter when passed one arg vs. two
-        const orderItem = mongoose.model('orderItem')
-        const item = await orderItem.findById(itemId)
-        cart.orderItems.push({ item })
+        const decorItems = mongoose.model('DecorItem')
+        const decorItem = await decorItems.findById(itemId)
+        cart.orderItems.push({ decorItem })
     }
     // return the save() method's promise
     return cart.save()
