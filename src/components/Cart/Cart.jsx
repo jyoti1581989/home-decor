@@ -1,4 +1,4 @@
-import { Avatar, Drawer, Row, Col, Flex } from "antd"
+import { Avatar, Drawer, Row, Col, Flex, Button } from "antd"
 import { ShoppingCartOutlined } from "@ant-design/icons"
 import { useState } from "react"
 import "./Cart.css"
@@ -12,7 +12,6 @@ export default function Cart({ cart }) {
     const onClose = () => {
         setOpen(false)
     }
-    console.log(cart)
     return (
         <>
             <Avatar icon={<ShoppingCartOutlined size="large" />} onClick={showDrawer} />
@@ -31,10 +30,18 @@ export default function Cart({ cart }) {
                             <Col span={16}>
                                 {item.decorItem.name}
                             </Col>
-                            <Col>{item.decorItem.price}</Col>
+                            <Col span={4}>{item.decorItem.price}</Col>
+                            <Col span={4}>{item.qty}</Col>
                         </Row>
                     )}
-                    <Flex align="flex-end" justify="flex-end"><button type="primary">Checkout</button></Flex>
+                    <Row className="row" gutter={[16, 24]}>
+                        <Col span={16}>
+                            Total
+                        </Col>
+                        <Col span={4}>{cart?.orderTotal}</Col>
+                        <Col span={4}>{cart?.orderQty}</Col>
+                    </Row>
+                    <Flex align="flex-end" justify="flex-end"><Button type="primary">Checkout</Button></Flex>
                 </Flex>
             </Drawer>
         </>

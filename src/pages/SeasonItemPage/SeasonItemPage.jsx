@@ -4,7 +4,7 @@ import ItemList from "../../components/ItemList/ItemList"
 import * as itemsAPI from "../../utilities/items-api"
 import * as ordersAPI from "../../utilities/order-api"
 
-export default function SeasonItemPage({ setCart }) {
+export default function SeasonItemPage({ cart, setCart }) {
     const { season } = useParams()
     const [decorItems, setDecorItems] = useState([])
 
@@ -42,10 +42,10 @@ export default function SeasonItemPage({ setCart }) {
         setCart(updatedCart)
     }
 
-    return (<div>
+    return (<div className='container'>
         <ItemList
             seasonItems={decorItems.filter(item => item.category.name.toLowerCase() === season)}
-            setCart={setCart}
+            cart={cart}
             handleAddToOrder={handleAddToOrder}
             handleChangeQty={handleChangeQty}
         >

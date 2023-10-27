@@ -75,10 +75,10 @@ orderSchema.methods.setItemQty = function (itemId, newQty) {
     // this keyword is bound to the cart (order doc)
     const cart = this
     // Find the line item in the cart for the menu item
-    const orderItem = cart.orderItems.find(orderItem => orderItem.item._id.equals(itemId))
+    const orderItem = cart.orderItems.find(orderItem => orderItem.decorItem._id.equals(itemId))
     if (orderItem && newQty <= 0) {
         // Calling deleteOne, removes the orderItem subdoc from the cart.orderItems array
-        orderItem.deleteOne()
+        orderItem.remove()
     } else if (orderItem) {
         // Set the new qty - positive value is assured thanks to prev if
         orderItem.qty = newQty

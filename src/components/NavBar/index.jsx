@@ -22,7 +22,7 @@ const NavBar = ({ user, setUser, cart }) => {
         <Layout className="layout">
             <Header style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: 'rbg(75, 17, 17)' }}>
                 <Col md={2}>
-                    <div className="logo" style={{ color: 'white' }}>Home Decor</div>
+                    <div className="logo App-logo" style={{ color: 'white' }}>Home Decor</div>
                 </Col>
                 <Col md={20}>
                     <Menu mode="horizontal" style={{ color: 'white', backgroundColor: 'rgb(75, 17, 17)' }}>
