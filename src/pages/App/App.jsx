@@ -6,6 +6,7 @@ import AuthPage from '../AuthPage/AuthPage'
 import NavBar from '../../components/NavBar/index'
 import HomePage from '../HomePage/HomePage'
 import SeasonItemPage from '../SeasonItemPage/SeasonItemPage'
+import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage'
 import { ConfigProvider } from 'antd'
 
 
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           {!user && <Route path="/auth" element={<AuthPage setUser={setUser} />} />}
           <Route path="/category/:season" element={<SeasonItemPage cart={cart} setCart={setCart} />} />
+          <Route path="/orders" element={<OrderHistoryPage user={user} setUser={setUser} />} />
           {/* additional Routes... */}
           {/* <Route path="/*" element={<Navigate to="/" />} /> */}
         </Routes>

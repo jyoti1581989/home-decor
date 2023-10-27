@@ -8,6 +8,7 @@ export default function SeasonItemPage({ cart, setCart }) {
     const { season } = useParams()
     const [decorItems, setDecorItems] = useState([])
 
+
     // The empty dependency array causes the effect
     // to run ONLY after the FIRST render
     useEffect(function () {
@@ -32,10 +33,7 @@ export default function SeasonItemPage({ cart, setCart }) {
         // 2. Update the cart state with the updated cart received from the server
         setCart(updatedCart)
     }
-    // async function handleCheckout() {
-    //     await ordersAPI.checkout()
-    //     navigate('/orders')
-    // }
+
 
     async function handleChangeQty(itemId, newQty) {
         const updatedCart = await ordersAPI.setItemQtyInCart(itemId, newQty)

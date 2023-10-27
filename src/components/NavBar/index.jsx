@@ -31,14 +31,23 @@ const NavBar = ({ user, setUser, cart }) => {
                         {user && <><Menu.Item key="2"><Link to="/category/spring">Spring</Link></Menu.Item>
                             <Menu.Item key="3"><Link to="/category/summer">Summer</Link></Menu.Item>
                             <Menu.Item key="4"><Link to="/category/fall">Fall</Link></Menu.Item>
-                            <Menu.Item key="5"><Link to="/category/winter">Winter</Link></Menu.Item></>}
+                            <Menu.Item key="5"><Link to="/category/winter">Winter</Link></Menu.Item>
+                        </>
+                        }
 
                     </Menu>
                 </Col>
+                <Col md={30}>
+                    {user && <Menu theme="dark" mode="horizontal" style={{ color: 'white', backgroundCplor: 'rbg(75, 17, 17)' }}>
+                        <Menu.Item key="cart" style={{ color: 'white', backgroundColor: 'rgb(75, 17, 17)' }}>
+                            <Cart cart={cart}></Cart>
+                        </Menu.Item>
+                    </Menu>
+                    }
+                </Col>
                 <Menu theme="dark" mode="horizontal" style={{ color: 'white', backgroundCplor: 'rbg(75, 17, 17)' }}>
-                    <Menu.Item key="cart" style={{ color: 'white', backgroundColor: 'rgb(75, 17, 17)' }}>
-                        <Cart cart={cart}></Cart>
-                    </Menu.Item>
+
+
                     <Menu.SubMenu key="sub-menu"
                         title={
                             <>
