@@ -17,9 +17,14 @@ export default function App() {
     <ConfigProvider theme={{
       token: {
         // Seed Token
-        colorPrimary: '#ce6f05',
+        colorPrimary: 'pink',
         borderRadius: 10,
       },
+      components: {
+        Button: {
+          colorPrimary: 'maroon'
+        }
+      }
     }}>
       <main className="App">
         <NavBar user={user} setUser={setUser} cart={cart} />

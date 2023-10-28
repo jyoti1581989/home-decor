@@ -1,5 +1,5 @@
 import { MinusCircleOutlined, PlusCircleOutlined } from '@ant-design/icons'
-import { Card, Button } from 'antd'
+import { Card, Button, Row, Col } from 'antd'
 const { Meta } = Card
 
 export default function ItemCard({ item, cartItemQty, handleAddToOrder, handleChangeQty }) {
@@ -26,9 +26,17 @@ export default function ItemCard({ item, cartItemQty, handleAddToOrder, handleCh
         >
             <Meta
                 title={item.name}
-                description={item.description}
+                description={<Row gutter={[16, 16]} >
+
+                    <Col span={18}>
+                        {item.description}
+                    </Col>
+                    <Col span={2}>
+                        {`$${item.price}`}
+                    </Col>
+                </Row>}
             />
-        </Card>
+        </Card >
     )
 
 }

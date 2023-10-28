@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="about">
             <h1>About</h1>
         </div>
-        <div> HomeDecor is where style lives. The best home decor website is the places we get all our inspiration...and furniture, accessories and finishing touches.
+        <div className="about-text"> HomeDecor is where style lives. The best home decor website is the places we get all our inspiration...and furniture, accessories and finishing touches.
             It is the ultimate guide to decorating and design and the indispensable go-to source for everyone who wants to create a more beautiful life.
             Whether your taste is classic or contemporary—or an eclectic mix of both—you'll find items and inspiration, the latest information and products, and tools to help you decorate, renovate, and entertain stylishly.
         </div>

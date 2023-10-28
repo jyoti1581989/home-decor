@@ -4,7 +4,7 @@ export default function ItemList({ seasonItems, cart, handleAddToOrder, handleCh
     return (
         <List
             dataSource={seasonItems}
-            grid={{ gutter: 16, column: 2 }}
+            grid={{ gutter: 16, column: 4 }}
             renderItem={(item) => (
                 <List.Item>
                     <ItemCard

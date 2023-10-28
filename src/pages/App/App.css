@@ -3,11 +3,11 @@
 }
 
 .App-logo {
-  font-family: 'Shrikhand', cursive;
+  /* font-family: 'Shrikhand', cursive; */
+  font-family: fantasy;
   text-align: center;
   font-weight: normal;
-  font-size: 2rem;
-  text-shadow: .1em .1em 0 hsl(17, 66%, 41%);
+  font-size: 1.5rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -28,7 +28,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #9b3f02;
 }
 
 @keyframes App-logo-spin {
@@ -45,4 +45,48 @@
   display: flex;
   justify-content: center;
   padding: 50px;
+}
+
+.react {
+  width: 0.02rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0.2rem;
+  animation: anim__rotate 8.2s linear infinite;
+  margin-top: 30px;
+}
+
+.react__spoke {
+  position: absolute;
+  border: 0.15rem #f96516 solid;
+  height: 1rem;
+  width: 2.8rem;
+  border-radius: 250%;
+}
+
+.react__spoke--1 {
+  transform: rotate(60deg);
+}
+
+.react__spoke--2 {
+  transform: rotate(-60deg);
+}
+
+.react__spoke--3 {
+  height: 0.4rem;
+  width: 0.4rem;
+  background-color: #f96516;
+  border-radius: 50%;
+  position: absolute;
+}
+
+@keyframes anim__rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

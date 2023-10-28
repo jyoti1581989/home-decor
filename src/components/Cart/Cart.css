@@ -1,0 +1,8 @@
+.drawer .ant-drawer-wrapper-body {
+    font-size: large;
+    display: flex;
+}
+
+.row {
+    padding-top: 10px;
+}

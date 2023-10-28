@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import ItemList from "../../components/ItemList/ItemList"
 import * as itemsAPI from "../../utilities/items-api"
 import * as ordersAPI from "../../utilities/order-api"
-
+import "./SeasonItemPage.css"
 export default function SeasonItemPage({ cart, setCart }) {
     const { season } = useParams()
     const [decorItems, setDecorItems] = useState([])
@@ -40,7 +40,7 @@ export default function SeasonItemPage({ cart, setCart }) {
         setCart(updatedCart)
     }
 
-    return (<div className='container'>
+    return (<div className='item-card-style'>
         <ItemList
             seasonItems={decorItems.filter(item => item.category.name.toLowerCase() === season)}
             cart={cart}
