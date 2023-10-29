@@ -17,7 +17,7 @@ export default function App() {
     <ConfigProvider theme={{
       token: {
         // Seed Token
-        colorPrimary: 'pink',
+        colorPrimary: 'orange',
         borderRadius: 10,
       },
       components: {

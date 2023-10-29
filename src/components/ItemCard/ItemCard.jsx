@@ -1,11 +1,15 @@
 import { MinusCircleOutlined, PlusCircleOutlined } from '@ant-design/icons'
 import { Card, Button, Row, Col } from 'antd'
+
 const { Meta } = Card
 
 export default function ItemCard({ item, cartItemQty, handleAddToOrder, handleChangeQty }) {
     return (
         <Card
-            style={{ width: 300 }}
+            style={{
+                width: 300, backgroundColor: "#F5B0CB",
+                boxShadow: "5px 8px 24px 5px rgba(208, 216, 243, 0.6)"
+            }}
             cover={
                 <img
                     alt="example"

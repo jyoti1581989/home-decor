@@ -1,16 +1,18 @@
 <div id="description" align="center">
 
-  # Blog Post
+  # Home Decor
 
-  ### [CLICK TO DEMO](https://blog-post-15-c6aa3ccb77d6.herokuapp.com/)
+  ### [CLICK TO DEMO](https://home-decor-9eb1ff7466de.herokuapp.com/)
   ##### By
   ##### Jyoti vaishnav
 
   ## :pencil: Description
  <img src="/public/Images/home-fall.png"> 
 
- HomeDecor is where style lives. The best home decor website is the places we get all our inspiration...and furniture, accessories and finishing touches. It is the ultimate guide to decorating and design and the indispensable go-to source for everyone who wants to create a more beautiful life.
- Whether your taste is classic or contemporary—or an eclectic mix of both—you'll find items and inspiration, the latest information and products, and tools to help you decorate, renovate, and entertain stylishly.
+ At Home Decor, we believe that your home is your sanctuary. It's the place where you relax, unwind, and spend time with the people you love. That's why we're dedicated to helping you create a home that reflects your unique personality and style.
+ We offer a wide selection of high-quality home decor products, from furniture and rugs to lighting and accessories. We also have a team of experienced interior designers who can help you create the perfect look for your home, no matter your budget or style.
+ We're passionate about home decor, and we love helping our customers create homes that they love. That's why we offer a 100% satisfaction guarantee on all of our products and services.
+ If you're looking for stylish and affordable home decor, visit Home Decore today. We're confident that you'll find everything you need to create a home that you love.
   </div>
 
  # :camera_flash: Screenshort
