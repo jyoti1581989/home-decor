@@ -1,8 +1,9 @@
 import { Carousel } from "antd"
 import "./HomePage.css"
+import { Footer } from "antd/es/layout/layout"
 
 export default function HomePage() {
-    return (<div>
+    return (<><div className='home-page'>
         <Carousel autoplay>
             <div>
                 <img src="/Images/home-spring.png" alt="" className="contentStyle" />
@@ -25,5 +26,7 @@ export default function HomePage() {
             Whether your taste is classic or contemporary—or an eclectic mix of both—you'll find items and inspiration, the latest information and products, and tools to help you decorate, renovate, and entertain stylishly.
         </div>
     </div>
+        <Footer className='footer'>Home Decor ©2023 Created by Jyoti Vaishnav</Footer>
+    </>
     )
 }

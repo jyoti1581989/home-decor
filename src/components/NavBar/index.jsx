@@ -9,6 +9,7 @@ import {
 } from '@ant-design/icons'
 import { logOut } from '../../utilities/users-service'
 import Cart from '../Cart/Cart'
+import { Footer } from 'antd/es/layout/layout'
 
 const { Header } = Layout
 
@@ -74,6 +75,7 @@ const NavBar = ({ user, setUser, cart }) => {
                     </Menu>
                 </Col>
             </Header >
+
         </Layout >
     )
 }
