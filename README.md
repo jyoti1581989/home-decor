@@ -18,9 +18,9 @@
  # :camera_flash: Screenshort
 | Description | Screenshot | 
   |:-----------:|:----------:| 
-  | <h3> **Welcome page** </h3> | <img src="public/images/screenshot1.png"> |
-  | <h3> **All blogs** </h3> | <img src="public/images/screenshot2.png"> |
-  | <h3> **My blogs** </h3> | <img src="public/images/screenshot3.png"> |
+  | <h3> **Home page** </h3> | <img src="/public/Images/Screenshot 2023-10-29 at 11.43.58 AM.png"> |
+  | <h3> **Decor Items** </h3> | <img src="/public/Images/Screenshot 2023-10-29 at 11.44.30 AM.png"> |
+  | <h3> **Shopping Cart** </h3> | <img src="/public/Images/Screenshot 2023-10-29 at 11.45.37 AM.png"> |
 
 
  ## :computer: Technologies Used
