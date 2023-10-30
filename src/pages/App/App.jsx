@@ -27,7 +27,7 @@ export default function App() {
       }
     }}>
       <main className="App">
-        <NavBar user={user} setUser={setUser} cart={cart} />
+        <NavBar user={user} setUser={setUser} cart={cart} setCart={setCart} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           {!user && <Route path="/auth" element={<AuthPage setUser={setUser} />} />}

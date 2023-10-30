@@ -1,5 +1,5 @@
 import SideDrawer from "../SideDrawer/SideDrawer"
-import { Card, Row, Col } from 'antd'
+import { Card, Table } from 'antd'
 import { useState } from "react"
 export default function OrderListItem({ order }) {
     const [open, setOpen] = useState(false)
@@ -9,20 +9,29 @@ export default function OrderListItem({ order }) {
     const onClose = () => {
         setOpen(false)
     }
+    const columns = [{
+        title: "Total",
+        dataIndex: "total",
+        key: "total"
+    }, {
+        title: "Quantity",
+        dataIndex: "qty",
+        key: "qty"
+    }, {
+        title: "Order Date",
+        dataIndex: "orderDate",
+        key: "orderDate"
+    }]
+    const dataSource = [{
+        key: "1",
+        total: order.orderTotal,
+        qty: order.orderQty,
+        orderDate: new Date(order.updatedAt).toLocaleDateString()
+    }]
     return (
         <>
             <Card title={`OrderId: ${order.orderId}`} onClick={showDrawer}>
-                <Row gutter={[16, 16]}>
-                    <Col span={4}>Total</Col>
-                    <Col span={6}>Quantity</Col>
-                    <Col span={12}>Order Date</Col>
-                </Row>
-                <Row gutter={[16, 16]}>
-                    <Col span={4}> {order.orderTotal}</Col>
-                    <Col span={6}>{order.orderQty}</Col>
-                    <Col span={12}>{new Date(order.updatedAt).toLocaleDateString()}
-                    </Col>
-                </Row>
+                <Table columns={columns} dataSource={dataSource} pagination={false} />
             </Card>
             <SideDrawer
                 open={open}

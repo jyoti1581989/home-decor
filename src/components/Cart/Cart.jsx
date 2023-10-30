@@ -7,7 +7,7 @@ import "./Cart.css"
 import SideDrawer from "../SideDrawer/SideDrawer"
 
 
-export default function Cart({ cart }) {
+export default function Cart({ cart, setCart }) {
     const [open, setOpen] = useState(false)
     const navigate = useNavigate()
     const showDrawer = () => {
@@ -19,7 +19,9 @@ export default function Cart({ cart }) {
 
     async function handleCheckout() {
         await ordersAPI.checkout()
+        setCart(null)
         navigate('/orders')
+        setOpen(false)
     }
 
     return (

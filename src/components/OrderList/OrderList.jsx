@@ -8,7 +8,7 @@ export default function OrderList({ orders }) {
         <div className="container">
             <List
                 dataSource={orders}
-                grid={{ gutter: 16, column: 4 }}
+                grid={{ gutter: 16, column: orders.length > 3 ? 4 : 1 }}
                 renderItem={(order) => {
 
                     return (

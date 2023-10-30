@@ -9,7 +9,7 @@ export default function SideDrawer({ open, onClose, order, handleCheckout, title
         open={open}
 
     >
-        <Flex gap="middle" vertical>
+        {order && <Flex gap="middle" vertical>
             <Row className="row" gutter={[16, 24]}>
                 <Col span={16}>
                     Item
@@ -36,6 +36,6 @@ export default function SideDrawer({ open, onClose, order, handleCheckout, title
             {!order?.isPaid && <Flex align="flex-end" justify="flex-end">
                 <Button type="primary" onClick={handleCheckout}>Checkout</Button>
             </Flex>}
-        </Flex>
+        </Flex>}
     </Drawer>)
 }

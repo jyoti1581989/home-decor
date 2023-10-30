@@ -35,6 +35,7 @@
    ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
   ![Github](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)
   ![VSCode](https://img.shields.io/badge/-VS_Code-05122A?style=flat&logo=visualstudio)
+  ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)
 
 
 
@@ -47,5 +48,5 @@
 ## :satellite: Upcoming Features
 
 - As a Admin i can change the item availability..
-
+- Notifaction badge on cart item..
 - Discount items..
