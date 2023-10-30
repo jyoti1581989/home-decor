@@ -19,6 +19,7 @@ export default function App() {
         // Seed Token
         colorPrimary: 'orange',
         borderRadius: 10,
+        fontSize: 20
       },
       components: {
         Button: {
