@@ -34,8 +34,6 @@ export default function App() {
           {!user && <Route path="/auth" element={<AuthPage setUser={setUser} />} />}
           <Route path="/category/:season" element={<SeasonItemPage cart={cart} setCart={setCart} />} />
           <Route path="/orders" element={<OrderHistoryPage user={user} setUser={setUser} />} />
-          {/* additional Routes... */}
-          {/* <Route path="/*" element={<Navigate to="/" />} /> */}
         </Routes>
       </main >
     </ConfigProvider >
